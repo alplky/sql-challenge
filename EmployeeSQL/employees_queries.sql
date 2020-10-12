@@ -27,3 +27,9 @@ ON e.emp_no = de.emp_no
 JOIN departments d
 ON d.dept_no = de.dept_no
 ORDER BY d.dept_name;
+
+-- list first name, last name, and sex for employees named "Hercules B."
+SELECT first_name, last_name, sex
+FROM employees 
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%'
+ORDER BY last_name;
