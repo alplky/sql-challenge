@@ -7,7 +7,8 @@ ON e.emp_no = s.emp_no;
 -- list first name, last name, and hire date for employees hired in 1986
 SELECT first_name, last_name, hire_date 
 FROM employees
-WHERE hire_date BETWEEN '1986-1-1' and '1986-12-31' ;
+WHERE hire_date BETWEEN '1986-1-1' and '1986-12-31'
+ORDER BY hire_date;
 
 -- list managers in each department (dept number, dept name, emp number, last name, first name)
 SELECT dm.dept_no, d.dept_name, dm.emp_no, e.last_name, e.first_name 
@@ -15,4 +16,14 @@ FROM dept_manager dm
 JOIN employees e
 ON dm.emp_no = e.emp_no
 JOIN departments d
-ON dm.dept_no = d.dept_no;
+ON dm.dept_no = d.dept_no
+ORDER BY d.dept_name;
+
+-- list department of each employee (emp number, last name, first name, dept name)
+SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
+FROM employees e
+JOIN dept_emp de 
+ON e.emp_no = de.emp_no
+JOIN departments d
+ON d.dept_no = de.dept_no
+ORDER BY d.dept_name;
