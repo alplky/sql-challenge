@@ -24,7 +24,7 @@ CREATE TABLE departments (
 -- create department managers table
 CREATE TABLE dept_manager (
 	dept_no varchar(5) references departments(dept_no),
-	dept_name varchar(30)
+	emp_no varchar(10)
 );
 
 -- create department employees table
