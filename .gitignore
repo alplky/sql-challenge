@@ -130,3 +130,6 @@ dmypy.json
 
 #Mac folder
 .DS_Store
+
+#Config
+config.py
