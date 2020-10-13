@@ -58,3 +58,13 @@ SELECT last_name, count(emp_no) as num_employees_with_same_last_name
 FROM employees
 GROUP BY last_name
 ORDER BY num_employees_with_same_last_name DESC;
+
+-- create view for bonus bar chard of avg salary by title
+CREATE VIEW avg_salaries_by_title AS
+SELECT round(avg(s.salary)) as avg_salary, t.title
+FROM titles t
+JOIN employees e
+ON t.title_id = e.emp_title_id
+JOIN salaries s
+ON e.emp_no = s.emp_no
+GROUP BY t.title;
