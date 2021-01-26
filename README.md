@@ -3,7 +3,7 @@
 Conduct research on employees working in the 1980s and 1990s at the company Pewlett Hackard. The only data that remains from the time period are 6 CSV files. 
 
 ## Objectives
-This reseach project consists of designing the tables that will hold the CSV data, import the CSVs into a SQL database, and answer a series of questions about the data. The taks will consist of:
+This research project consists of designing the tables that will hold the CSV data, import the CSVs into a SQL database, and answer a series of questions about the data. The tasks will consist of:
 
     1. Data Modeling
     2. Data Engineering
@@ -133,7 +133,7 @@ ORDER BY num_employees_with_same_last_name DESC;
 
 ## Bonus
 In a Jupyter Notebook, import the SQL database into Pandas and create an engine via SQLalchemy to read the tables and create the following graphs:
-1. A histogram to visualise the most common salary ranges for employees.
+1. A histogram to visualize the most common salary ranges for employees.
 2. A bar chart of average salary by title.
 
 #### Import the SQL database into Pandas
